@@ -413,9 +413,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="sect1">
 <h2 id="_modeling"><a class="anchor" href="#_modeling"></a>Modeling</h2>
 <div class="sectionbody">
-<div class="imageblock right unresolved">
+<div class="imageblock right">
 <div class="content">
-<img src="/Network-Management-Model.svg" alt="Network Management Model" width="700">
+<img src="../_images/Network-Management-Model.svg" alt="Network Management Model" width="700">
 </div>
 </div>
 <div class="paragraph">
@@ -438,9 +438,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="paragraph">
 <p>This is the full data model of your graph.</p>
 </div>
-<div class="imageblock right unresolved">
+<div class="imageblock right">
 <div class="content">
-<img src="/network-schema-arrows.jpg" alt="network schema arrows">
+<img src="../_images/network-schema-arrows.jpg" alt="network schema arrows">
 </div>
 </div>
 <div class="paragraph">
@@ -492,9 +492,9 @@ The datacenter uses a <code>10.x.x.x/8</code> IP address range.</p>
 RETURN network;</code></pre>
 </div>
 </div>
-<div class="imageblock right unresolved">
+<div class="imageblock right">
 <div class="content">
-<img src="/network-zones.jpg" alt="network zones">
+<img src="../_images/network-zones.jpg" alt="network zones">
 </div>
 </div>
 <div class="paragraph">
@@ -557,9 +557,9 @@ RETURN nr.ip as network_ip, ri.ip as router_if_ip, r.name as router, r.zone as z
 <div class="sect1">
 <h2 id="_network_exploration_racks"><a class="anchor" href="#_network_exploration_racks"></a>Network Exploration: Racks</h2>
 <div class="sectionbody">
-<div class="imageblock right unresolved">
+<div class="imageblock right">
 <div class="content">
-<img src="/network-rack.jpg" alt="network rack" width="600">
+<img src="../_images/network-rack.jpg" alt="network rack" width="600">
 </div>
 </div>
 <div class="paragraph">
@@ -659,9 +659,9 @@ RETURN length(path) as hops, count(*) as count;</code></pre>
 └──────┴───────┘</pre>
 </div>
 </div>
-<div class="imageblock right unresolved">
+<div class="imageblock right">
 <div class="content">
-<img src="/network-alternative-routes.jpg" alt="network alternative routes">
+<img src="../_images/network-alternative-routes.jpg" alt="network alternative routes">
 </div>
 </div>
 <div class="paragraph">
@@ -742,14 +742,14 @@ RETURN t.name, t.id, t.cpu, t.ram, t.disk;</code></pre>
 <div class="paragraph">
 <p>As the graph visualization of our full datacenter would be pretty but otherwise useless &#8230;&#8203;</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<img src="/network-8000-machines.jpg" alt="network 8000 machines">
+<img src="../_images/network-8000-machines.jpg" alt="network 8000 machines">
 </div>
 </div>
-<div class="imageblock right unresolved">
+<div class="imageblock right">
 <div class="content">
-<img src="/network-rack-machines-type.jpg" alt="network rack machines type" width="400">
+<img src="../_images/network-rack-machines-type.jpg" alt="network rack machines type" width="400">
 </div>
 </div>
 <div class="paragraph">
@@ -897,9 +897,9 @@ RETURN s.name, collect(v.name) as versions, [x IN collect([d.name,dv.name]) WHER
 <div class="paragraph">
 <p>Each of our machines is set up to run an OS and a single application, each of which might require other dependencies that are also installed.</p>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<img src="/network-software-arrows.jpg" alt="network software arrows">
+<img src="../_images/network-software-arrows.jpg" alt="network software arrows">
 </div>
 </div>
 <div class="listingblock">
@@ -910,9 +910,9 @@ OPTIONAL MATCH (sv)&lt;-[v:VERSION]-(sw)
 RETURN *</code></pre>
 </div>
 </div>
-<div class="imageblock unresolved">
+<div class="imageblock">
 <div class="content">
-<img src="/network-software-machine.jpg" alt="network software machine">
+<img src="../_images/network-software-machine.jpg" alt="network software machine">
 </div>
 </div>
 </div>
