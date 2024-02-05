@@ -1,0 +1,6 @@
+name: neo4j-graph-examples-network-management
+title: Network Management Graph Example
+version: '1'
+asciidoc:
+  attributes:
+    img: ''
