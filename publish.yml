@@ -1,0 +1,20 @@
+content:
+  sources:
+    - url: ./
+      branches: ['HEAD']
+      edit_url: https://github.com/QubitPi/neo4j-graph-examples-network-management/tree/{refname}/{path}
+      exclude:
+        - '!**/_includes/*'
+        - '!**/readme.adoc'
+        - '!**/README.adoc'
+
+ui:
+  bundle:
+    # in case this gets close sourced, its backup is at
+    # https://github.com/QubitPi/QubitPi/blob/master/neo4j/ui-bundle-latest.zip
+    url: https://static-content.neo4j.com/build/ui-bundle-latest.zip
+    snapshot: true
+  output_dir: /assets
+
+urls:
+  html_extension_style: indexify
