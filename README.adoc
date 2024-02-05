@@ -7,10 +7,10 @@
 :demodb: false
 :data: false
 :use-load-script: scripts/network-management.cypher
-:use-dump-file: data/network-management-40.dump
+:use-dump-file: data/network-management-50.dump
 :zip-file: false
 :use-plugin: false
-:target-db-version: 3.5,4.0
+:target-db-version: 5.0
 :bloom-perspective: bloom/network-management.bloom-perspective
 :guide: documentation/network-management.neo4j-browser-guide
 :rendered-guide: https://guides.neo4j.com/sandbox/{name}/index.html
@@ -54,7 +54,7 @@ MATCH (dc:DataCenter {location: $location})-[:CONTAINS]->(r:Router)-[:ROUTES]->(
 RETURN i.ip as ip
 ----
 
-=== Setup
+=== Setup [[setup]]
 
 This is for Neo4j version: {target-db-version}
 
@@ -119,6 +119,22 @@ endif::[]
 * link:code/csharp/Example.cs[C#]
 * link:code/python/example.py[Python]
 * link:code/go/example.go[Go]
+
+=== Troubleshooting
+
+==== Error: "This database is currently offline"
+
+This is most likely due to the version mismatch between Neo4J database and dump version. The number in the
+link:data[dump file name] corresponds to the major and minor version of the matching database version. For example:
+network-management-50.dump works for 5.0 database. *Please link:#setup[recreate database] with the matching dump file
+version*
+
+==== Error: "Unsupported clauses were used: ..."
+
+Looks like the correct database has not been selected. If Neo4j desktop app is used, please make sure that the *DB name
+displayed as*
+
+image::documentation/img/correct-db.png[Error loading documentation/img/correct-db.png]
 
 === Feedback
 
